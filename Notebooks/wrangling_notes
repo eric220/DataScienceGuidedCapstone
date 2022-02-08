@@ -1,0 +1,17 @@
+Code task
+2: The initial data set contains 330 records and 27 columns for resorts
+4: Big Mountain Resort is found in the data set
+7-9: One name is found to repeat, but it is not in same region or state (may need to change ids)
+10-12: Region and state found to vary
+13: High variability in number of resorts per state
+18: There some distributions to keep an eye on
+19-23: Skiable terrain at Silveton Mountain seems believed to be incorrect, change to 1819. This needs further investigation (https://silvertonmountain.com/mountain/stats/)
+24: Drop 'fastEight', seems to contain little relevant information
+25-26: Years open contains one value of 2019 years, that row (Pine Knob Ski Resort) is dropped
+28: Nearly %14 of rows are missing price data for both weekend and weekday, those rows are dropped (may wish to research)
+31-34: Verify all states are accounted for, regex to delete square brackets and contents
+35: Merge state demographics to state summary table
+36-37...: Verify Montana statewide pricing structure. Drop weekday price column, and rows missing weekend price
+38: The current data set contains 277 records with 25 columns
+
+Several data issues were found and corrected as noted above. It may be possible to recover some data points with a little research, if desired. Also, naming may become an issue due to region/state variation and on repetetive name. The target feature is AdultWeekend (price for adult ticket on a weekend). There are a few missing data points that may need aditional exploration. At this point it may be prudent to move to EDA, with an eye towards revisiting these data later.
