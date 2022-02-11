@@ -1,0 +1,6 @@
+A train test split of 70/30 was executed for validation checks. An initial baseline ticket price was established (around $64). As expected, the r^2 value was slightly below zero. The mean absolute error on the test set was just over $19 and the rmse was around $24, the difference is likely due to outliers in the data. Thus the baseline values are: $64 plus or minus $19/$24 depending on the metric. The first model tried is an linear regressor. Missing values are imputed as the mean and the median, little difference is observed. The second model tried is a random forest. Htperparameter search for random forest yields an imputation strategy using median and no scaling. Cross validation of both models is as follows: 
+LR: train mae 10.499032338015294, std 1.6220608976799664, test 11.793465668669324
+RF: train mae 9.644639167595688, std 1.3528565172191818; test 9.537730050637332
+The Random Forest model has a better error rate and less variability then the Linear Regression, and is the model of choice. 
+
+A data quantity assesment has been conducted and shows the learning has stabilized. Therefore, it is not recommended to seek more data.
